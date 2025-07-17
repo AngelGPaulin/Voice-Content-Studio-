@@ -1,0 +1,45 @@
+# Python generated files and directories
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python/
+env/
+# Specific virtual environment folder used in this project
+.venv_chattts/
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.tox/
+.nox/
+.ipynb_checkpoints/
+.pytest_cache/
+
+# IDEs and Editors configuration files
+.idea/
+.project
+.directory
+.DS_Store # macOS specific
+.vscode/  # VS Code configuration files
+
+# Generated audio and text output files
+*.wav
+*.mp3
+*.ogg
+*.txt # For transcribed text output
+*.srt # For subtitle files
+*.vtt # For subtitle files
+
+# Temporary or intermediate files
+*.tmp
+
+
+
+# Speaker embedding files management:
+# Ignore ALL .pt files by default
+*.pt
+
+# BUT, explicitly INCLUDE the ones you want to keep:
+!speaker_hombre.pt
+!speaker_mujer.pt  
+
