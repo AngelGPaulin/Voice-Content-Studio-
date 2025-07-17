@@ -34,7 +34,7 @@ env/
 *.tmp
 
 
-
+asset/
 # Speaker embedding files management:
 # Ignore ALL .pt files by default
 *.pt
