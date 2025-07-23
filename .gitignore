@@ -1,45 +1,55 @@
-# Python generated files and directories
-__pycache__/
-*.pyc
-*.pyo
-*.pyd
-.Python/
+# Ignorar el entorno virtual
+.venv_new/
+.venv/
 env/
-# Specific virtual environment folder used in this project
-.venv_chattts/
-*.egg-info/
-.pytest_cache/
-.mypy_cache/
-.tox/
-.nox/
-.ipynb_checkpoints/
-.pytest_cache/
+venv/
+*.pyc
+__pycache__/
 
-# IDEs and Editors configuration files
-.idea/
-.project
-.directory
-.DS_Store # macOS specific
-.vscode/  # VS Code configuration files
-
-# Generated audio and text output files
-*.wav
-*.mp3
-*.ogg
-*.txt # For transcribed text output
-*.srt # For subtitle files
-*.vtt # For subtitle files
-
-# Temporary or intermediate files
+# Ignorar archivos temporales y de configuración del IDE
+.DS_Store
+.vscode/
+*.log
 *.tmp
+*.temp
 
-
+# Ignorar la carpeta 'asset' que contiene modelos descargados por ChatTTS
 asset/
-# Speaker embedding files management:
-# Ignore ALL .pt files by default
-*.pt
 
-# BUT, explicitly INCLUDE the ones you want to keep:
-!speaker_hombre.pt
-!speaker_mujer.pt  
+# Ignorar todos los archivos generados dentro de las carpetas
+audio/*
+!audio/.gitkeep  # Excepción para mantener la carpeta 'audio' vacía pero trackeada
 
+final_video/*
+!final_video/.gitkeep # Excepción para mantener la carpeta 'final_video' vacía pero trackeada
+
+subtitles/*
+!subtitles/.gitkeep # Excepción para mantener la carpeta 'subtitles' vacía pero trackeada
+
+texts/*
+!texts/.gitkeep # Excepción para mantener la carpeta 'texts' vacía pero trackeada
+# Si input_text.txt es un archivo de entrada que no se genera y quieres mantenerlo,
+# descomenta la siguiente línea:
+#!texts/input_text.txt 
+
+videos/*
+!videos/.gitkeep # Excepción para mantener la carpeta 'videos' vacía pero trackeada
+# Si Minecraft.mp4 es un archivo de entrada que no se genera y quieres mantenerlo,
+# descomenta la siguiente línea:
+#!videos/Minecraft.mp4
+
+# Ignorar archivos específicos generados en la raíz del proyecto si los hubiera
+output_generated_audio.wav
+output_video_with_subtitles.mp4
+output_generated_subtitles.srt
+whisper_result.json
+
+# Archivos de modelos de voz que SÍ deben ser trackeados (no se ignoran)
+# voices/speaker_men.pt
+# voices/speaker_women.pt
+
+# Archivo principal que SÍ debe ser trackeado (no se ignora)
+# main.py
+
+# Archivo de dependencias que SÍ debe ser trackeado (muy recomendado)
+# requirements.txt
